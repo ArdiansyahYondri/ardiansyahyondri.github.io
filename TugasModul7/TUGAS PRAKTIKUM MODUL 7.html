@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Portofolio Ku</title>
+
+<style>
+    p {
+        font-display: auto;
+        font-weight: 300%;
+    }
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #eaeaea;
+    }
+
+    
+    header {
+        color: #0b0505;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    nav ul li a {
+        color: #120b0b;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 8px 12px;
+        border: 2px solid #1d1313;
+    }
+
+    
+    .banner {
+        height: 280px;
+        background: url('bebek.jpeg') center/cover no-repeat;
+        position: relative;
+    }
+    
+    .overlay {
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.3);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: #eee;
+        font-size: 40px;
+        padding-left: 50px;
+        letter-spacing: 3px;
+    }
+
+    
+    .content {
+        display: flex;
+        flex-direction: row; 
+        gap: 30px;
+        padding: 40px;
+        justify-content: space-between; 
+        align-items: flex-start;
+    }
+
+    .right-section {
+        display: flex;
+        flex-direction: column; 
+        gap: 30px;
+        align-items: flex-star;
+    }
+
+    .box-group {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 20px;
+    }
+
+    .box {
+        width: 150px; 
+        height: 80px;
+        border: 3px solid #000;
+        display: flex;
+        background: #555;
+        justify-content: center;
+        align-items: center;
+        color: #100f0f;
+        font-weight: bold;
+    }
+
+    .right-section p {
+        width: 660px; 
+        text-align: justify;
+        font-size: 14px;
+    }
+
+    
+    footer {
+        background: #5b5858;
+        color: #fff;
+        padding: 12px;
+        text-align: center;
+        margin-top: 30px;
+    }
+</style>
+
+</head>
+<body>
+<p>WEB PROGRAM KU</p>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">PROFILE</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">ABOUT</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="banner">
+</section>
+
+<section class="content">
+    <section>
+    <div class="center-section">
+        <p>Tapi justru karena kecilnya itu membuat pengelolaannya menjadi lebih.</p> 
+        <p>intensif. Ini seperti Negara Singapura, Negara yang karena kecilnya dapat.</p>
+        <p>mengelola wilayahnya menjadi lebih baik dan lebih cepat dibanding.</p> 
+        <p>Negara yang lebih besar.</p>
+        </div>
+    </section>
+
+    <div class="right-section">
+        <div class="box-group">
+            <div class="box">SD</div>
+            <div class="box">SMP</div>
+            <div class="box">SMA</div>
+            <div class="box">S1</div>
+        </div>
+        <p>
+            Kisah Sekolah Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat.
+        </p>
+    </div>
+</section>
+
+<footer>
+    Copyright 2025 - Web Portofolio Ku
+</footer>
+
+</body>
+</html>
