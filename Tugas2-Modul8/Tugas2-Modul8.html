@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kalkulator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .calculator {
+        background-color: #ffffff;
+        border: 2px solid #cccccc;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 300px;
+      }
+      h2 {
+        color: #333333;
+        margin-bottom: 20px;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      button {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      #hasil {
+        background-color: #f9f9f9;
+        font-weight: bold;
+      }
+      .input-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+      }
+      .input-group label {
+        font-weight: bold;
+        color: #333333;
+        width: 50px;
+        text-align: left;
+      }
+      .input-group input {
+        flex: 1;
+        margin-left: 10px;
+      }
+      .buttons {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="calculator">
+      <h2>Kalkulator Sederhana</h2>
+
+      <div class="input-group">
+        <label for="bil1">Bil 1 :</label>
+        <input type="text" id="bil1" />
+      </div>
+      <div class="input-group">
+        <label for="bil2">Bil 2 :</label>
+        <input type="text" id="bil2" />
+      </div>
+
+      <div class="buttons">
+        <button onclick="hitung('+')">+</button>
+        <button onclick="hitung('-')">-</button>
+        <button onclick="hitung('*')">x</button>
+        <button onclick="hitung('/')">/</button>
+      </div>
+
+      <div class="input-group">
+        <label for="hasil">Hasil :</label>
+        <input type="text" id="hasil" readonly />
+      </div>
+    </div>
+
+    <script language="javascript">
+      function hitung(op) {
+        let a = parseFloat(document.getElementById("bil1").value);
+        let b = parseFloat(document.getElementById("bil2").value);
+        let c = 0;
+
+        if (op == "+") c = a + b;
+        if (op == "-") c = a - b;
+        if (op == "*") c = a * b;
+        if (op == "/") c = a / b;
+
+        document.getElementById("hasil").value = c;
+      }
+    </script>
+  </body>
+</html>

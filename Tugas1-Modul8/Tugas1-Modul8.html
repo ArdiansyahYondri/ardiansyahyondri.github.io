@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <title>Konversi Nilai Angka ke Nilai Huruf</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 40px;
+        background: linear-gradient(to bottom, #e0f7fa, #b2dfdb);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 15px;
+        width: 350px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        border: 2px solid #4caf50;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button {
+        margin-top: 15px;
+        padding: 10px;
+        width: 100%;
+        font-size: 16px;
+        background: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      button:hover {
+        background: #45a049;
+      }
+
+      #hasil {
+        margin-top: 20px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Konversi Nilai Angka → Huruf</h2>
+
+      <label>Masukkan Nilai (0 - 100):</label>
+      <input type="number" id="nilai" min="0" max="100" />
+
+      <button onclick="konversiNilai()">Konversi</button>
+
+      <div id="hasil"></div>
+    </div>
+
+    <script>
+      function konversiNilai() {
+        let n = parseInt(document.getElementById("nilai").value);
+        let grade = "";
+        let color = "";
+
+        if (isNaN(n) || n < 0 || n > 100) {
+          grade = "Nilai tidak valid!";
+          color = "#f44336"; // red
+        } else if (n <= 40) {
+          grade = "E";
+          color = "#f44336"; // red
+        } else if (n <= 55) {
+          grade = "D";
+          color = "#ff9800"; // orange
+        } else if (n <= 60) {
+          grade = "C";
+          color = "#ffeb3b"; // yellow
+        } else if (n <= 65) {
+          grade = "BC";
+          color = "#8bc34a"; // light green
+        } else if (n <= 70) {
+          grade = "B";
+          color = "#4caf50"; // green
+        } else if (n <= 80) {
+          grade = "AB";
+          color = "#2196f3"; // blue
+        } else {
+          grade = "A";
+          color = "#9c27b0"; // purple
+        }
+
+        document.getElementById("hasil").innerHTML =
+          "Nilai Huruf: <b style='color: " + color + ";'>" + grade + "</b>";
+      }
+    </script>
+  </body>
+</html>
